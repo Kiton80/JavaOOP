@@ -18,7 +18,7 @@ public class Flight {
         this.arrivalDate = arrivalDate;
         this.price = price;
         this.airliner = airliner;
-        this.seats = airliner.getFreeSeatsCaunt();
+        this.seats = airliner.getFreeSeatsCount();
         this.airlineName = airlineName;
     }
 

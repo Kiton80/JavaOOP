@@ -11,13 +11,13 @@ public class Airliner  {
         this.freeSeatsCaunt=type.getSeats();  // обернуть в трай кетч!!
     }
 
-    public int getFreeSeatsCaunt() {
+    public int getFreeSeatsCount() {
         return freeSeatsCaunt;
     }
 
-    public void setFreeSeatsCaunt(int freeSeatsCaunt) {
+    public void setFreeSeatsCaunt(int freeSeatsCount) {
         try {
-            if (freeSeatsCaunt<this.type.getSeats()) this.freeSeatsCaunt ++ ;
+            if (freeSeatsCount<this.type.getSeats()) this.freeSeatsCaunt ++ ;
         } catch (Exception e) {
             System.out.println("Операция не прошла. Свободных мест нет");
             e.printStackTrace();
