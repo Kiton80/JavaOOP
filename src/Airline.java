@@ -66,5 +66,6 @@ public class Airline {
     public void addFlight(Flight flight) {
         flight.setAirlineName(this.airlineName);
         this.flights.add( flight);
+
     }
 }
