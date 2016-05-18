@@ -89,14 +89,14 @@ public class FlightIOUtils {
 //        }
 
         String airlineName=  tokens[0];
-        Airport arrivalAirport=(Airport.valueOf(tokens[1]));
-        Airport departureAirport=Airport.valueOf(tokens[2]);
+        String arrivalAirport=tokens[1];
+        String departureAirport=tokens[2];
         int departureDate=Integer.parseInt(tokens[3]);
         int arrivalDate=Integer.parseInt(tokens[4]);
-        int priceFoTiket=(Integer.parseInt(tokens[5]));
-        Airliner airliner= new Airliner(AirlinerType.valueOf(tokens[6]));
+        int priceFoTiket=Integer.parseInt(tokens[5]);
+        String airliner=tokens[6];
 
-        return new Flight(departureAirport,arrivalAirport, departureDate, arrivalDate,  priceFoTiket,  airliner, airlineName);
+        return new Flight( airlineName,departureAirport,arrivalAirport, departureDate, arrivalDate,  priceFoTiket,  airliner);
     }
 
     // Бинарный вывод

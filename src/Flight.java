@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat;
+import java.util.logging.SimpleFormatter;
+
 /**
  * Created by Кирил on 16.05.2016.
  */
@@ -12,15 +15,16 @@ public class Flight {
     private int freeSeats;
 
 
-    public Flight(Airport departure, Airport arrival, int departureDate, int arrivalDate, int price, Airliner airliner, String airlineName) {
-        this.departureAirport = departure;
-        this.arrivalAirport = arrival;
+    public Flight( String airlineName,String departure, String arrival, int departureDate, int arrivalDate, int price, String airliner) {
+        this.airlineName = airlineName;
+        this.departureAirport=Airport.valueOf(departure);
+        this.arrivalAirport = Airport.valueOf(arrival);
         this.departureDate = departureDate;
         this.arrivalDate = arrivalDate;
         this.priceFoTiket = price;
-        this.airliner = airliner;
-        this.freeSeats = airliner.getFreeSeatsCaunt();
-        this.airlineName = airlineName;
+        this.airliner =new Airliner(AirlinerType.valueOf(airliner));
+        this.freeSeats = this.airliner.getFreeSeatsCaunt();
+
     }
 
     public Flight() {
@@ -29,11 +33,12 @@ public class Flight {
 
     @Override
     public String toString(){
-        String result =this.getDepartureAirport().toString()+"-" + this.getArrivalAirport().toString() +"  "+
-                " time Departure:" + this.departureDate+" "+
-                " time Arrival: " + this.arrivalDate+" "+
-                "Type of plane: "+ this.airliner.toString()+" "+
-                "Airline: "+ this.airlineName+" ";
+        SimpleDateFormat format=new SimpleDateFormat("dd.MM.yy  hh.mm");
+        String result ="Airline: "+ this.airlineName+"   "+
+                this.getDepartureAirport().toString()+"-" + this.getArrivalAirport().toString() +"  \r\n"+
+                " time Departure:" + format.format(this.departureDate)+" "+
+                " time Arrival: " + format.format(this.arrivalDate)+" "+
+                "Type of plane: "+ this.airliner.toString()+". ";
 
         return result;}
 

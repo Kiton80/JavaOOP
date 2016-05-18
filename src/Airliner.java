@@ -31,6 +31,8 @@ public class Airliner  {
     public int getFreeSeatsCaunt() {
         return freeSeatsCaunt;
     }
+    @Override
+    public String toString(){return type.getName();}
 
 
 }
