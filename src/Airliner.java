@@ -32,8 +32,5 @@ public class Airliner  {
         return freeSeatsCaunt;
     }
 
-    public static void main(String[] args) {
-      //  Airliner bb=new Airliner(AirlinerType.valueOf()); // КАК работать с енумом в такой ситуации?
 
-    }
 }

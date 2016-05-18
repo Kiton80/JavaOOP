@@ -12,6 +12,7 @@ import java.util.List;
 public class Airline {
     private final String airlineName;
     private List<Flight> flights;
+
     public Airline(String airlineName, List<Flight> flights) {
         this.airlineName = airlineName;
         this.flights = flights;
@@ -22,26 +23,26 @@ public class Airline {
     }
 
     private static List<Flight> readFlights(String airlineName){
-        String fileName = "D:\\Airline\\Airlines\\"+airlineName;
-        List<String> resultStringList = new ArrayList<String>();
-        String thisLine ;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            while ((thisLine = br.readLine()) != null) {
-                    resultStringList.add(thisLine);
-            }
-            br.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-         // resultStringList распарстить для инициализации Flight
-        // инициализировать флайтс
-
-
-
-        System.out.println("Ошибка в чтении файла модуль в разработке");
+//        String fileName = "D:\\Airline\\Airlines\\"+airlineName;
+//        List<String> resultStringList = new ArrayList<String>();
+//        String thisLine ;
+//        try {
+//            BufferedReader br = new BufferedReader(new FileReader(fileName));
+//            while ((thisLine = br.readLine()) != null) {
+//                resultStringList.add(thisLine);
+//            }
+//            br.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//        // resultStringList распарстить для инициализации Flight
+//        // инициализировать флайтс
+//
+//
+//
+//        System.out.println("Ошибка в чтении файла модуль в разработке");
     return null;}
 
     public String getAirlineName() {
