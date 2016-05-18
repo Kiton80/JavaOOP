@@ -2,23 +2,24 @@
  * Created by Кирил on 16.05.2016.
  */
 public class Flight {
-    private  Airport departure;
-    private  Airport arrival;
+    private String airlineName;
+    private  Airport departureAirport;
+    private  Airport arrivalAirport;
     private  int departureDate;
     private  int arrivalDate;
-    private  int price;
+    private  int priceFoTiket;
     private Airliner airliner;
-    private int seats;
-    private String airlineName;
+    private int freeSeats;
+
 
     public Flight(Airport departure, Airport arrival, int departureDate, int arrivalDate, int price, Airliner airliner, String airlineName) {
-        this.departure = departure;
-        this.arrival = arrival;
+        this.departureAirport = departure;
+        this.arrivalAirport = arrival;
         this.departureDate = departureDate;
         this.arrivalDate = arrivalDate;
-        this.price = price;
+        this.priceFoTiket = price;
         this.airliner = airliner;
-        this.seats = airliner.getFreeSeatsCaunt();
+        this.freeSeats = airliner.getFreeSeatsCaunt();
         this.airlineName = airlineName;
     }
 
@@ -32,7 +33,7 @@ public class Flight {
     }
     @Override
     public String toString(){
-    String result =this.getDeparture().toString()+"-" + this.getArrival().toString() +"  "+
+    String result =this.getDepartureAirport().toString()+"-" + this.getArrivalAirport().toString() +"  "+
             " time Departure:" + this.departureDate+" "+
             " time Arrival: " + this.arrivalDate+" "+
             "Type of plane: "+ this.airliner.toString()+" "+
@@ -40,12 +41,12 @@ public class Flight {
 
     return result;}
 
-    public Airport getDeparture() {
-        return departure;
+    public Airport getDepartureAirport() {
+        return departureAirport;
     }
 
-    public Airport getArrival() {
-        return arrival;
+    public Airport getArrivalAirport() {
+        return arrivalAirport;
     }
 
     public int getDepartureDate() {
@@ -56,19 +57,20 @@ public class Flight {
         return arrivalDate;
     }
 
-    public int getPrice() {
-        return price;
+    public int getPriceFoTiket() {
+        return priceFoTiket;
     }
 
     public Airliner getAirliner() {
         return airliner;
     }
 
-    public int getSeats() {
-        return seats;
+    public int getFreeSeats() {
+        return freeSeats;
     }
 
     public String getAirlineName() {
         return airlineName;
     }
+
 }

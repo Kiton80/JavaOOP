@@ -12,7 +12,6 @@ import java.util.List;
 public class Airline {
     private final String airlineName;
     private List<Flight> flights;
-
     public Airline(String airlineName, List<Flight> flights) {
         this.airlineName = airlineName;
         this.flights = flights;

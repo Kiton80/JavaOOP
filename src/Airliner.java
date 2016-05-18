@@ -24,8 +24,14 @@ public class Airliner  {
         }
     }
 
-    public static void main(String[] args) {
-        Airliner boeing=new Airliner(AirlinerType.AIRBUS_A380);
+    public AirlinerType getType() {
+        return type;
     }
+
+    public static void main(String[] args) {
+
+        //Airliner boeing=new Airliner(AirlinerType.AIRBUS_A380);
+    }
+
 
 }
