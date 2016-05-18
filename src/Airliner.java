@@ -28,10 +28,12 @@ public class Airliner  {
         return type;
     }
 
-    public static void main(String[] args) {
-
-        //Airliner boeing=new Airliner(AirlinerType.AIRBUS_A380);
+    public int getFreeSeatsCaunt() {
+        return freeSeatsCaunt;
     }
 
+    public static void main(String[] args) {
+      //  Airliner bb=new Airliner(AirlinerType.valueOf()); // КАК работать с енумом в такой ситуации?
 
+    }
 }

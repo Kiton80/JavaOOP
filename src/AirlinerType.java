@@ -6,7 +6,6 @@ public enum AirlinerType {
     AIRBUS_A380("AIRBUS_A380",550),
     EMBRAER_E190("EMBRAER_E190",80);
 
-
     private final String name;
     private final int seats;
 
@@ -28,5 +27,4 @@ public enum AirlinerType {
     public String toString(){
         return "Type "+ this.name;
     }
-
 }

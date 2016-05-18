@@ -23,46 +23,70 @@ public class Flight {
         this.airlineName = airlineName;
     }
 
+    public Flight() {
+
+    }
+
+    @Override
+    public String toString(){
+        String result =this.getDepartureAirport().toString()+"-" + this.getArrivalAirport().toString() +"  "+
+                " time Departure:" + this.departureDate+" "+
+                " time Arrival: " + this.arrivalDate+" "+
+                "Type of plane: "+ this.airliner.toString()+" "+
+                "Airline: "+ this.airlineName+" ";
+
+        return result;}
+
     public void setAirlineName(String airlineName) {
         this.airlineName = airlineName;
     }
 
-    public static void main(String[] args) {
-
-
-    }
-    @Override
-    public String toString(){
-    String result =this.getDepartureAirport().toString()+"-" + this.getArrivalAirport().toString() +"  "+
-            " time Departure:" + this.departureDate+" "+
-            " time Arrival: " + this.arrivalDate+" "+
-            "Type of plane: "+ this.airliner.toString()+" "+
-            "Airline: "+ this.airlineName+" ";
-
-    return result;}
-
     public Airport getDepartureAirport() {
         return departureAirport;
+    }
+
+    public void setDepartureAirport(Airport departureAirport) {
+        this.departureAirport = departureAirport;
     }
 
     public Airport getArrivalAirport() {
         return arrivalAirport;
     }
 
+    public void setArrivalAirport(Airport arrivalAirport) {
+        this.arrivalAirport = arrivalAirport;
+    }
+
     public int getDepartureDate() {
         return departureDate;
+    }
+
+    public void setDepartureDate(int departureDate) {
+        this.departureDate = departureDate;
     }
 
     public int getArrivalDate() {
         return arrivalDate;
     }
 
+    public void setArrivalDate(int arrivalDate) {
+        this.arrivalDate = arrivalDate;
+    }
+
     public int getPriceFoTiket() {
         return priceFoTiket;
     }
 
+    public void setPriceFoTiket(int priceFoTiket) {
+        this.priceFoTiket = priceFoTiket;
+    }
+
     public Airliner getAirliner() {
         return airliner;
+    }
+
+    public void setAirliner(Airliner airliner) {
+        this.airliner = airliner;
     }
 
     public int getFreeSeats() {
